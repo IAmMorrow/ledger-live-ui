@@ -1,7 +1,8 @@
 name: publish storybook
-push:
-  branches:
-    - master
+on:
+  push:
+    branches:
+      - master
 env:
   GH_TOKEN: ${{ github.actor }}:${{ secrets.GITHUB_TOKEN }}
 run: yarn deploy-storybook --ci
