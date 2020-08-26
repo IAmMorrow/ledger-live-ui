@@ -11,8 +11,8 @@
     "lint": "standard",
     "format": "standard-prettier --format",
     "test": "jest --coverage",
-    "storybook": "start-storybook -p 6006 -s ./.storybook",
-    "build-storybook": "build-storybook -s ./.storybook",
+    "storybook": "start-storybook -p 6006 -s .storybook/public",
+    "build-storybook": "build-storybook -s .storybook/public",
     "deploy-storybook": "storybook-to-ghpages"
   },
   "author": "",
