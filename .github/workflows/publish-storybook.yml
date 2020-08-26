@@ -5,4 +5,8 @@ on:
       - master
 env:
   GH_TOKEN: ${{ github.actor }}:${{ secrets.GITHUB_TOKEN }}
-run: yarn deploy-storybook --ci
+jobs:
+  my_first_job:
+    steps:
+      - name: Publish storybook on github pages
+        run: yarn deploy-storybook --ci
