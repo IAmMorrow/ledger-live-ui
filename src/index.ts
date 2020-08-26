@@ -1,3 +1,1 @@
-export function hello() {
-    console.log("hello");
-}
+export * from "./components/Button";
