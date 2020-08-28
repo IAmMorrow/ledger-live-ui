@@ -84,6 +84,13 @@ jobs:
           GIT_AUTHOR_NAME: ${{ github.actor }}
           GIT_COMMITTER_EMAIL: ${{ github.actor }}@users.noreply.github.com
           GIT_COMMITTER_NAME: ${{ github.actor }}
+        - name: Create commit comment
+          if: github.event_name == 'pull_request'
+          uses: peter-evans/commit-comment@v1
+          with:
+            body: |
+              This PR's content can be previewed [here][1] until it's closed / merged
+              [1]: https://${GITHUB_ACTOR}.github.io/ledger-live-ui/storybook/${TARGET_DIR}
 
   remove-storybook:
     name: Remove Storybook
