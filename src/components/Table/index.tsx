@@ -35,6 +35,18 @@ const Column = styled.div<{ flex?: string; textAlign?: string }>`
   text-align: ${({ textAlign }) => textAlign || "initial"};
 `;
 
+const TableTitle = styled.span`
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 21px;
+
+  align-items: center;
+
+  color: #142533;
+`;
+
 export type TableProps = {
   title: string;
   actions?: ReactNode;
@@ -45,7 +57,9 @@ function Table({ title, actions, children }: TableProps): React.ReactElement {
   return (
     <Container>
       <TableHeader separated>
-        <Column>{title}</Column>
+        <Column>
+          <TableTitle>{title}</TableTitle>
+        </Column>
         <Column>{actions}</Column>
       </TableHeader>
       {children}

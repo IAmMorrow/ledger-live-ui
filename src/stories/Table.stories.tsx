@@ -20,8 +20,8 @@ TestTable.args = {
   title: "Votes",
   actions: (
     <>
-      <Button label="Manage votes" type="link" />
-      <Button label="Claim rewards (TRX 0.42069)" type="link" />
+      <Button label="Manage votes" type="link" size="x-small" />
+      <Button label="Claim rewards (TRX 0.42069)" type="link" size="x-small" />
     </>
   ),
   children: (
