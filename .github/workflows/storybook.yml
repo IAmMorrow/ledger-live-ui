@@ -90,7 +90,7 @@ jobs:
         with:
           body: |
             This PR's content can be previewed [here][1] until it's closed / merged
-            [1]: https://${{GITHUB_ACTOR}}.github.io/ledger-live-ui/storybook/${{TARGET_DIR}}
+            [1]: https://${{ github.actor }}.github.io/ledger-live-ui/storybook/pull/${{ github.event.number }}
 
   remove-storybook:
     name: Remove Storybook
