@@ -88,7 +88,7 @@ jobs:
         if: github.event_name == 'pull_request'
         uses: peter-evans/commit-comment@v1
         with:
-          body: This PR's content can be previewed [here](https://${{ github.actor }}.github.io/ledger-live-ui/storybook/pull/${{ github.event.number }}) until it's closed / merged
+          body: This PR's content can be previewed [here](https://${{ github.actor }}.github.io/ledger-live-ui/storybook/pull/${{ github.event.number }}/index.html) until it's closed / merged
 
   remove-storybook:
     name: Remove Storybook
