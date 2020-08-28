@@ -12,7 +12,7 @@
     "format": "standard-prettier --format",
     "test": "jest --coverage",
     "storybook": "start-storybook -p 6006 -s .storybook/public",
-    "build:storybook": "build-storybook -c .storybook -o dist -s .storybook/public",
+    "build:storybook": "build-storybook -c .storybook -o dist -s .storybook/public"
   },
   "author": "",
   "license": "ISC",
