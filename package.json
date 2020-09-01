@@ -7,17 +7,19 @@
   "module": "dist/index.es.js",
   "jsnext:main": "dist/index.es.js",
   "scripts": {
-    "build": "rollup -c",
+    "build": "rollup -c && npx flowgen dist/index.d.ts -o dist/index.flow.js --add-flow-header",
     "lint": "eslint src",
     "format": "standard-prettier --format",
     "test": "jest --coverage",
     "storybook": "start-storybook -p 6006 -s .storybook/public",
-    "build:storybook": "build-storybook -c .storybook -o dist -s .storybook/public"
+    "build:storybook": "build-storybook -c .storybook -o sb-dist -s .storybook/public"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "color": "^3.1.2",
+    "color": "^3.1.2"
+  },
+  "peerDependencies": {
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "styled-components": "^5.1.1"
@@ -38,12 +40,15 @@
     "eslint-plugin-prettier": "^3.1.4",
     "eslint-plugin-react": "^7.20.6",
     "prettier": "^2.1.1",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
     "react-is": "^16.13.1",
     "rollup": "^2.26.5",
     "rollup-plugin-commonjs": "^10.1.0",
     "rollup-plugin-node-resolve": "^5.2.0",
     "rollup-plugin-peer-deps-external": "^2.2.3",
     "rollup-plugin-typescript2": "^0.27.2",
+    "styled-components": "^5.1.1",
     "typescript": "^4.0.2"
   },
   "standard": {

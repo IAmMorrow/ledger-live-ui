@@ -1,0 +1,37 @@
+{
+  "palette": {
+    "type": "dark",
+    "primary": {
+      "main": "#6490F1",
+      "contrastText": "#FFFFFF"
+    },
+    "secondary": {
+      "main": "#FFFFFF"
+    },
+    "error": {
+      "main": "#EA2E49",
+      "contrastText": "#FFFFFF",
+      "light": "rgb(234,46,73, 0.1)"
+    },
+    "warning": {
+
+    },
+    "info": {
+
+    },
+    "success": {
+
+    },
+    "shade": "#FFFFFF",
+    "divider": "rgba(255, 255, 255, 0.05)",
+    "background": {
+      "paper": "#1C1D1F",
+      "default": "#131415"
+    },
+    "action": {
+      "active": "rgba(255, 255, 255, 0.1)",
+      "hover": "rgba(255,255,255, 0.1)",
+      "disabled": "rgba(255,255,255, 0.1)"
+    }
+  }
+}

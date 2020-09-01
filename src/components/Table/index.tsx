@@ -1,4 +1,4 @@
-import React, { ReactNode } from "react";
+import React from "react";
 import styled from "styled-components";
 
 const Container = styled.div`
@@ -10,8 +10,8 @@ const Row = styled.div<{ separated?: boolean }>`
   display: flex;
   flex-direction: row;
   padding: 14px 0px;
-  border-bottom: ${({ separated }) =>
-    separated ? "solid 1px rgba(20, 37, 51, 0.05)" : "none"};
+  border-bottom: ${({ theme, separated }) =>
+    separated ? `solid 1px ${theme.palette.divider}` : "none"};
   align-items: center;
 `;
 
@@ -44,13 +44,13 @@ const TableTitle = styled.span`
 
   align-items: center;
 
-  color: #142533;
+  color: ${({ theme }) => theme.palette.shade[100]};
 `;
 
 export type TableProps = {
   title: string;
-  actions?: ReactNode;
-  children: React.ReactElement;
+  actions?: React.ReactNode;
+  children?: React.ReactElement;
 };
 
 function Table({ title, actions, children }: TableProps): React.ReactElement {

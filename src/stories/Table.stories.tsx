@@ -4,6 +4,7 @@ import { Story, Meta } from "@storybook/react/types-6-0";
 
 import { Table, TableProps } from "../components/Table";
 import { Button } from "../components/Button";
+import { Surface } from "../components/layout/Surface";
 
 export default {
   title: "UI/Table",
@@ -13,7 +14,11 @@ export default {
   },
 } as Meta;
 
-const Template: Story<TableProps> = (args) => <Table {...args} />;
+const Template: Story<TableProps> = (args) => (
+  <Surface>
+    <Table {...args} />
+  </Surface>
+);
 
 export const TestTable = Template.bind({});
 TestTable.args = {

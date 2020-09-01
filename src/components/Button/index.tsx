@@ -39,8 +39,8 @@ const BaseButton = styled.button<BaseButtonProps>`
   background-color: transparent;
 
   &:disabled {
-    background: rgba(20, 37, 51, 0.1);
-    color: rgba(20, 37, 51, 0.3);
+    background-color: ${({ theme }) => theme.palette.shade[10]};
+    color: ${({ theme }) => theme.palette.shade[30]};
     cursor: auto;
   }
 
@@ -50,28 +50,28 @@ const BaseButton = styled.button<BaseButtonProps>`
 `;
 
 const PrimaryButton = styled(BaseButton)`
-  background: #6490f1;
-  color: white;
+  background-color: ${({ theme }) => theme.palette.primary.main};
+  color: ${({ theme }) => theme.palette.primary.contrastText};
 `;
 
 const SecondaryButton = styled(BaseButton)`
-  color: rgba(20, 37, 51, 0.5);
-  border: 1px solid rgba(20, 37, 51, 0.5);
+  color: ${({ theme }) => theme.palette.shade[50]};
+  border: ${({ theme }) => `1px solid ${theme.palette.shade[50]}`};
   margin: -1px;
 `;
 
 const LinkButton = styled(BaseButton)`
-  color: #6490f1;
+  color: ${({ theme }) => theme.palette.primary.main};
 `;
 
 const AlertButton = styled(BaseButton)`
-  background: #ea2e49;
-  color: #ffffff;
+  background-color: ${({ theme }) => theme.palette.error.main};
+  color: ${({ theme }) => theme.palette.error.contrastText};
 `;
 
 const AlertSecondaryButton = styled(BaseButton)`
-  background: rgba(234, 46, 73, 0.1);
-  color: #ea2e49;
+  background-color: ${({ theme }) => theme.palette.error.light};
+  color: ${({ theme }) => theme.palette.error.main};
 `;
 
 const buttonByType = {
