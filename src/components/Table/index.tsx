@@ -6,27 +6,32 @@ const Container = styled.div`
   flex-direction: column;
 `;
 
-const Row = styled.div<{ separated?: boolean }>`
+const Row = styled.div`
   display: flex;
   flex-direction: row;
   padding: 14px 0px;
-  border-bottom: ${({ theme, separated }) =>
-    separated ? `solid 1px ${theme.palette.divider}` : "none"};
   align-items: center;
+  font-family: Inter;
+  font-size: 12px;
+  font-weight: 600;
 `;
 
 const HeaderRow = styled(Row)`
-  background: rgba(20, 37, 51, 0.02);
-  color: rgba(20, 37, 51, 0.5);
-  font-family: Inter;
+  background: ${({ theme }) => theme.palette.shade[2]};
+  color: ${({ theme }) => theme.palette.shade[50]};
   font-style: normal;
   font-weight: 500;
-  font-size: 12px;
   line-height: 18px;
 `;
 
 const TableHeader = styled(Row)`
   justify-content: space-between;
+  border-bottom: ${({ theme }) => `solid 1px ${theme.palette.divider}`};
+`;
+
+const TableFooter = styled(Row)`
+  justify-content: center;
+  border-top: ${({ theme }) => `solid 1px ${theme.palette.divider}`};
 `;
 
 const Column = styled.div<{ flex?: string; textAlign?: string }>`
@@ -47,6 +52,16 @@ const TableTitle = styled.span`
   color: ${({ theme }) => theme.palette.shade[100]};
 `;
 
+const TableBody = styled.div<{ separated?: boolean }>`
+  display: flex;
+  flex-direction: column;
+
+  > :not(:last-child) {
+    border-bottom: ${({ theme, separated }) =>
+      separated ? `solid 1px ${theme.palette.divider}` : "none"};
+  }
+`;
+
 export type TableProps = {
   title: string;
   actions?: React.ReactNode;
@@ -56,13 +71,18 @@ export type TableProps = {
 function Table({ title, actions, children }: TableProps): React.ReactElement {
   return (
     <Container>
-      <TableHeader separated>
+      <TableHeader>
         <Column>
           <TableTitle>{title}</TableTitle>
         </Column>
         <Column>{actions}</Column>
       </TableHeader>
-      {children}
+      <TableBody separated>
+        {children}
+      </TableBody>
+      <TableFooter>
+        lol
+      </TableFooter>
     </Container>
   );
 }

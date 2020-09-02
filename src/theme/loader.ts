@@ -10,7 +10,7 @@ function enrichMainColor(mainColor: any) {
 }
 
 function generateShade(shadeColor: string) {
-  const shades = [10, 20, 30, 40, 50, 60, 70, 80, 90, 100];
+  const shades = [2, 5, 10, 20, 30, 40, 50, 60, 70, 80, 90, 100];
 
   return shades.reduce((acc, value) => {
     acc[value] = Color(shadeColor)

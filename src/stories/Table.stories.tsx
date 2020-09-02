@@ -5,6 +5,7 @@ import { Story, Meta } from "@storybook/react/types-6-0";
 import { Table, TableProps } from "../components/Table";
 import { Button } from "../components/Button";
 import { Surface } from "../components/layout/Surface";
+import { Text } from "../components/Text";
 
 export default {
   title: "UI/Table",

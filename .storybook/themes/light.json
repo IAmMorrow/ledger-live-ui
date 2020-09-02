@@ -41,42 +41,49 @@
       "bold": 700
     },
     "h1": {
+      "fontFamily": "Inter",
       "fontStyle": "normal",
       "fontWeight": 600,
       "fontSize": 32,
       "lineHeight": 39
     },
     "h2": {
+      "fontFamily": "Inter",
       "fontStyle": "normal",
       "fontWeight": 600,
       "fontSize": 28,
       "lineHeight": 34
     },
     "h3": {
+      "fontFamily": "Inter",
       "fontStyle": "normal",
       "fontWeight": 600,
       "fontSize": 22,
       "lineHeight": 27
     },
     "h4": {
+      "fontFamily": "Inter",
       "fontStyle": "normal",
       "fontWeight": 600,
       "fontSize": 18,
       "lineHeight": 22
     },
     "h5": {
+      "fontFamily": "Inter",
       "fontStyle": "normal",
       "fontWeight": 600,
       "fontSize": 16,
       "lineHeight": 19
     },
     "small": {
+      "fontFamily": "Inter",
       "fontStyle": "normal",
       "fontWeight": 800,
       "fontSize": 10,
       "lineHeight": 12
     },
     "x-small": {
+      "fontFamily": "Inter",
       "fontStyle": "normal",
       "fontWeight": 800,
       "fontSize": 8,
