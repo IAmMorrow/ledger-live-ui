@@ -3,10 +3,12 @@
     "type": "light",
     "primary": {
       "main": "#6490F1",
+      "light": "rgba(100, 144, 241, 0.1)",
       "contrastText": "#FFFFFF"
     },
     "secondary": {
-      "main": "#142533"
+      "light": "rgba(20, 37, 51, 0.05)",
+      "main": "rgba(20, 37, 51, 0.5)"
     },
     "error": {
       "main": "#EA2E49",
@@ -14,13 +16,15 @@
       "light": "rgb(234,46,73, 0.1)"
     },
     "warning": {
-
+        "light": "rgba(255, 152, 79, 0.1)",
+        "main": "#FF984F"
     },
     "info": {
 
     },
     "success": {
-
+      "main": "#66BE54",
+      "light": "rgba(102, 190, 84, 0.1)"
     },
     "shade": "#142533",
     "divider": "rgba(20,37,51, 0.1)",

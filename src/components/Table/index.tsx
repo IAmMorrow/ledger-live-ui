@@ -77,12 +77,8 @@ function Table({ title, actions, children }: TableProps): React.ReactElement {
         </Column>
         <Column>{actions}</Column>
       </TableHeader>
-      <TableBody separated>
-        {children}
-      </TableBody>
-      <TableFooter>
-        lol
-      </TableFooter>
+      <TableBody separated>{children}</TableBody>
+      <TableFooter>lol</TableFooter>
     </Container>
   );
 }
