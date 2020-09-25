@@ -14,9 +14,12 @@ type GenericTextProps = {
 const GenericText = styled.span.attrs(({ as }: GenericTextProps) => ({
   as: as,
 }))<GenericTextProps>`
-  font-size: ${({ fontSize, theme }) => fontSize ? `${fontSize}px` : theme.typography.fontSize};
-  font-family: ${({ fontFamily, theme }) => fontFamily || theme.typography.fontFamily};
-  font-weight: ${({ fontWeight, theme }) => fontWeight || theme.typography.fontWeight.regular};
+  font-size: ${({ fontSize, theme }) =>
+    fontSize ? `${fontSize}px` : theme.typography.fontSize};
+  font-family: ${({ fontFamily, theme }) =>
+    fontFamily || theme.typography.fontFamily};
+  font-weight: ${({ fontWeight, theme }) =>
+    fontWeight || theme.typography.fontWeight.regular};
   font-style: ${({ fontStyle }) => fontStyle || "inherit"};
   line-height: ${({ lineHeight }) => (lineHeight ? `${lineHeight}px` : "1.5")};
 `;
@@ -24,9 +27,7 @@ const GenericText = styled.span.attrs(({ as }: GenericTextProps) => ({
 const H1 = styled(GenericText).attrs(({ theme }) => ({
   ...theme.typography.h1,
   as: "h1",
-}))`
-  
-`
+}))``;
 
 const textComponents = {
   h1: H1,
@@ -42,7 +43,15 @@ type TextProps = {
   children?: string;
 };
 
-export function Text({ type, fontSize, fontFamily, fontWeight, lineHeight, color, children }: TextProps): React.ReactElement {
+export function Text({
+  type,
+  fontSize,
+  fontFamily,
+  fontWeight,
+  lineHeight,
+  color,
+  children,
+}: TextProps): React.ReactElement {
   const TextComponent = type ? textComponents[type] : GenericText;
 
   return (
