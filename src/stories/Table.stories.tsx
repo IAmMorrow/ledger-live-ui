@@ -57,6 +57,18 @@ TestTable.args = {
         </Table.Column>
       </Table.Row>
       <Table.Row separated>
+        <Table.Column flex="1">aaa</Table.Column>
+        <Table.Column textAlign="right" flex="2">
+          bbb
+        </Table.Column>
+        <Table.Column textAlign="right" flex="2">
+          ccc
+        </Table.Column>
+        <Table.Column textAlign="right" flex="1">
+          ddd
+        </Table.Column>
+      </Table.Row>
+      <Table.Row separated>
         <Table.Column flex="1">eee</Table.Column>
         <Table.Column textAlign="right" flex="2">
           fff
