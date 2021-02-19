@@ -56,30 +56,6 @@ TestTable.args = {
           ddd
         </Table.Column>
       </Table.Row>
-      <Table.Row separated>
-        <Table.Column flex="1">eee</Table.Column>
-        <Table.Column textAlign="right" flex="2">
-          fff
-        </Table.Column>
-        <Table.Column textAlign="right" flex="2">
-          ggg
-        </Table.Column>
-        <Table.Column textAlign="right" flex="1">
-          hhh
-        </Table.Column>
-      </Table.Row>
-      <Table.Row separated>
-        <Table.Column flex="1">eee</Table.Column>
-        <Table.Column textAlign="right" flex="2">
-          iii
-        </Table.Column>
-        <Table.Column textAlign="right" flex="2">
-          jjj
-        </Table.Column>
-        <Table.Column textAlign="right" flex="1">
-          kkk
-        </Table.Column>
-      </Table.Row>
     </>
   ),
 };
