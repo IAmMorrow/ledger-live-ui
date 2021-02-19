@@ -47,7 +47,7 @@ TestTable.args = {
       <Table.Row separated>
         <Table.Column flex="1">aaa</Table.Column>
         <Table.Column textAlign="right" flex="2">
-          bbb
+          bbbc
         </Table.Column>
         <Table.Column textAlign="right" flex="2">
           ccc
