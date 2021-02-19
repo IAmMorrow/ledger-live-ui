@@ -4,9 +4,9 @@
 
 <!-- e.g. Bug Fix, Feature, Code Quality Improvement, UI Polish... -->
 
-### Context
+### Figma
 
-<!-- e.g. GitHub issue #45 / contextual discussion -->
+<!-- Paste the figma link so it can be quickly checked -->
 
 ### Parts of the app affected / Test plan
 
